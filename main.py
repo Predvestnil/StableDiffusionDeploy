@@ -38,4 +38,4 @@ def greet(positive_prompt, negative_prompt):
 
 app = gr.Interface(fn=greet, inputs=['text', 'text'], outputs=[gr.Textbox(label='Prompt'), gr.Number(label='Seed'), gr.Image(label='GAN Image')])
 Thread(target = app.launch).start()
-Thread(target = webbrowser.open_new('http://127.0.0.1:7860')).start()
+Thread(target = lambda: webbrowser.open_new('http://127.0.0.1:7860')).start()
