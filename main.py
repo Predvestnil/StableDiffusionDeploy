@@ -5,6 +5,9 @@ import torch
 
 import gradio as gr
 
+import webbrowser
+from threading import Thread
+
 from diffusers import AutoPipelineForText2Image
 
 pipe = AutoPipelineForText2Image.from_pretrained(
@@ -34,4 +37,5 @@ def greet(positive_prompt, negative_prompt):
 
 
 app = gr.Interface(fn=greet, inputs=['text', 'text'], outputs=[gr.Textbox(label='Prompt'), gr.Number(label='Seed'), gr.Image(label='GAN Image')])
-app.launch()
+Thread(target = app.launch).start()
+Thread(target = webbrowser.open_new('http://127.0.0.1:7860')).start()
