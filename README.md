@@ -7,22 +7,22 @@ To install and run the StableDiffusionDeploy project, follow these steps:
 
 1. Clone the repository using the command:
    
-   git clone https://github.com/Predvestnil/StableDiffusionDeploy
+   `git clone https://github.com/Predvestnil/StableDiffusionDeploy`
    
 
 2. Navigate to the project directory:
    
-   cd StableDiffusionDeploy
+   `cd StableDiffusionDeploy`
    
 
 3. Install the necessary dependencies using the command:
    
-   pip install -r requirements.txt
+   `pip install -r requirements.txt`
    
 
 4. Run the main project script:
    
-   python main.py
+   `python main.py`
    
 _The script will load the necessary materials, compile them, and open the default browser with the address of the local server where the Gradio server is located._
 
