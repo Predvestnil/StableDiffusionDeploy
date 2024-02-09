@@ -30,7 +30,7 @@ def greet(positive_prompt, negative_prompt):
         negative_prompt=negative_prompt,
         guidance_scale=0.0,
         num_inference_steps=num_inference_steps,
-        generator=torch.Generator().manual_seed(seed).cuda(),
+        generator=torch.Generator().manual_seed(seed),
     ).images
 
     return positive_prompt, seed, images[0]
