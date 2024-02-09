@@ -23,7 +23,7 @@ pipe = pipe.to('cuda')
 def greet(positive_prompt, negative_prompt):
     seed = random.randint(0, sys.maxsize)
 
-    num_inference_steps = 100
+    num_inference_steps = 20
 
     images = pipe(
         prompt=positive_prompt,
